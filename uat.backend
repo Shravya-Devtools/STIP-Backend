@@ -1,0 +1,4 @@
+bucket  = "terraform-remote-state-devops-123456"
+key     = "UAT/terraform.tfstate"
+region  = "us-east-1"
+encrypt = true
