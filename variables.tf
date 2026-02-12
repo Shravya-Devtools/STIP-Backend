@@ -25,3 +25,8 @@ variable "lambda_configs" {
     path   = string
   }))
 }
+variable "environment" {
+  description = "Environment name (SIT/UAT/PROD)"
+  type        = string
+}
+
