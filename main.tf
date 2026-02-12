@@ -31,7 +31,7 @@ resource "aws_s3_object" "lambda_zip" {
 resource "aws_lambda_function" "lambda" {
   for_each = var.lambda_configs
 
-  function_name = each.key
+  function_name = "${each.key}-${var.environment}"
   role          = data.aws_iam_role.lambda_role.arn
   runtime       = "python3.10"
   handler       = "index.handler"
